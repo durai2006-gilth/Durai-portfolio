@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Durai - B.Tech Information Technology Student & Frontend Developer Portfolio. Looking for internship opportunities.">
+    <meta name="keywords" content="Durai, Portfolio, Frontend Developer, Information Technology, Student, Internship, HTML, CSS, JavaScript, C, Python, Java">
+    <meta name="author" content="Durai">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Durai | Frontend Developer & IT Student Portfolio">
+    <meta property="og:description" content="3rd-Year B.Tech Information Technology Student looking for internship opportunities. Check out my skills and projects.">
+    <meta property="og:type" content="website">
+
+    <title>Durai | Frontend Developer & IT Student</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Three.js CDN for 3D Particle Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3D Particle Background Canvas Container -->
+    <div id="canvas-container" aria-hidden="true"></div>
+
+    <!-- Floating Background Light Orbs -->
+    <div class="bg-glow orb-1" aria-hidden="true"></div>
+    <div class="bg-glow orb-2" aria-hidden="true"></div>
+    <div class="bg-glow orb-3" aria-hidden="true"></div>
+
+    <!-- Floating Navigation Bar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar glass-panel" aria-label="Main Navigation">
+            <a href="#home" class="nav-logo" aria-label="Durai Portfolio Home">
+                <span class="logo-accent">&lt;</span>Durai<span class="logo-accent"> /&gt;</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active"><i data-lucide="home"></i><span>Home</span></a></li>
+                <li><a href="#about" class="nav-link"><i data-lucide="user"></i><span>About</span></a></li>
+                <li><a href="#skills" class="nav-link"><i data-lucide="code-2"></i><span>Skills</span></a></li>
+                <li><a href="#education" class="nav-link"><i data-lucide="graduation-cap"></i><span>Education</span></a></li>
+                <li><a href="#achievements" class="nav-link"><i data-lucide="award"></i><span>Achievements</span></a></li>
+                <li><a href="#contact" class="nav-link"><i data-lucide="mail"></i><span>Contact</span></a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- 🏠 HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-badge glass-badge">
+                        <span class="status-dot"></span>
+                        <span>Available for Internship</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text hero-name">Durai</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        B.Tech Information Technology Student &amp; <span class="glow-text">Frontend Developer</span>
+                    </h2>
+
+                    <blockquote class="hero-bio glass-quote">
+                        I'm a passionate 3rd-year Information Technology student with an interest in frontend development and programming. I enjoy building modern, responsive and interactive web experiences and I'm currently looking for an internship opportunity to improve my skills and gain real-world experience.
+                    </blockquote>
+
+                    <div class="hero-cta-group">
+                        <a href="#skills" class="btn btn-primary glass-btn">
+                            <span>View My Skills</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary glass-btn">
+                            <span>Contact Me</span>
+                            <i data-lucide="send"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-avatar-card glass-card tilt-card 3d-avatar-card">
+                        <div class="avatar-speech-bubble glass-panel-3d" id="avatar-speech-bubble">
+                            <span class="bubble-wave">👋</span>
+                            <span class="bubble-text">Hi! I'm <strong class="gradient-text">Durai</strong>!</span>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        <div class="avatar-stage">
+                            <div class="cyber-ring ring-outer"></div>
+                            <div class="cyber-ring ring-inner"></div>
+                            <div class="avatar-ring">
+                                <div class="avatar-inner">
+                                    <img src="durai.jpg" alt="Durai" class="avatar-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='block';">
+                                    <i data-lucide="terminal" id="avatar-fallback" class="avatar-icon" style="display: none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card-tag">
+                            <span class="tag-title">Current Focus</span>
+                            <span class="tag-value">Frontend &amp; Software Dev</span>
+                        </div>
+                        <div class="hero-tech-pills">
+                            <span class="pill">HTML5</span>
+                            <span class="pill">CSS3</span>
+                            <span class="pill">JS</span>
+                            <span class="pill">Python</span>
+                            <span class="pill">Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down-hint" aria-label="Scroll down to About section">
+                <i data-lucide="chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- 👤 ABOUT SECTION -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">GET TO KNOW ME</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-main-card glass-card tilt-card">
+                        <div class="card-glow-header">
+                            <i data-lucide="user-check" class="card-header-icon"></i>
+                            <h3>Personal Overview</h3>
+                        </div>
+                        <p class="about-description">
+                            I'm Durai, a 3rd-year B.Tech Information Technology student interested in frontend development and software development. I enjoy learning new technologies, creating interactive web experiences, and improving my programming skills. I'm currently looking for an internship where I can gain real-world experience and contribute to a development team.
+                        </p>
+                    </div>
+
+                    <div class="about-cards-grid">
+                        <div class="info-card glass-card tilt-card">
+                            <div class="info-icon-wrapper cyan">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Degree Program</h4>
+                                <p>B.Tech Information Technology</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-card tilt-card">
+                            <div class="info-icon-wrapper purple">
+                                <i data-lucide="book-open"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Academic Year</h4>
+                                <p>3rd Year</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-card tilt-card">
+                            <div class="info-icon-wrapper blue">
+                                <i data-lucide="laptop"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Primary Role</h4>
+                                <p>Frontend Developer</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-card tilt-card">
+                            <div class="info-icon-wrapper green">
+                                <i data-lucide="search"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Current Status</h4>
+                                <p>Looking for Internship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💻 SKILLS SECTION -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">TECHNICAL PROFICIENCY</span>
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                </div>
+
+                <!-- Frontend Development -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="layout" class="cat-icon"></i>
+                        <span>Frontend Development</span>
+                    </h3>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box orange">
+                                    <i data-lucide="file-code"></i>
+                                </div>
+                                <h4>HTML</h4>
+                            </div>
+                            <p class="skill-desc">Building semantic website structures.</p>
+                        </div>
+
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box blue">
+                                    <i data-lucide="palette"></i>
+                                </div>
+                                <h4>CSS</h4>
+                            </div>
+                            <p class="skill-desc">Creating responsive layouts and modern interfaces.</p>
+                        </div>
+
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box yellow">
+                                    <i data-lucide="sparkles"></i>
+                                </div>
+                                <h4>JavaScript</h4>
+                            </div>
+                            <p class="skill-desc">Adding interactivity and dynamic functionality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="code" class="cat-icon"></i>
+                        <span>Programming Languages</span>
+                    </h3>
+
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box cyan">
+                                    <i data-lucide="cpu"></i>
+                                </div>
+                                <h4>C</h4>
+                            </div>
+                            <p class="skill-desc">Programming fundamentals and problem solving.</p>
+                        </div>
+
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box green">
+                                    <i data-lucide="terminal"></i>
+                                </div>
+                                <h4>Python</h4>
+                            </div>
+                            <p class="skill-desc">Programming and application development.</p>
+                        </div>
+
+                        <div class="skill-card glass-card tilt-card">
+                            <div class="skill-header">
+                                <div class="skill-icon-box purple">
+                                    <i data-lucide="box"></i>
+                                </div>
+                                <h4>Java</h4>
+                            </div>
+                            <p class="skill-desc">Object-oriented programming fundamentals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🎓 EDUCATION SECTION -->
+        <section id="education" class="education-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">ACADEMIC JOURNEY</span>
+                    <h2 class="section-title">Education &amp; <span class="gradient-text">Degree</span></h2>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-node">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content glass-card tilt-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <span class="degree-badge">Current Degree</span>
+                                    <h3 class="degree-title">B.Tech – Information Technology</h3>
+                                </div>
+                                <span class="year-pill">3rd Year</span>
+                            </div>
+
+                            <p class="education-note">
+                                Focusing on foundational software engineering concepts, frontend technologies, algorithm analysis, and database management systems.
+                            </p>
+
+                            <!-- Optional Editable Fields Placeholder:
+                                 College/University Name: [Edit in script.js or HTML]
+                                 CGPA / Percentage: [Optional]
+                                 Graduation Year: [Optional]
+                            -->
+                            <div class="education-meta-tags">
+                                <span class="meta-tag"><i data-lucide="book"></i> Core IT Subjects</span>
+                                <span class="meta-tag"><i data-lucide="code-2"></i> Practical Labs</span>
+                                <span class="meta-tag"><i data-lucide="target"></i> Project Work</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🏆 ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="achievements-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">MILESTONES &amp; TARGETS</span>
+                    <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+                </div>
+
+                <div class="achievements-card glass-card center-card">
+                    <div class="empty-state-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+
+                    <h3 class="achievements-headline">Building for the Future</h3>
+                    
+                    <p class="achievements-quote">
+                        I'm currently building my skills and working toward my first professional opportunities.
+                    </p>
+
+                    <div class="stats-counter-grid">
+                        <div class="stat-card glass-card tilt-card">
+                            <span class="stat-number gradient-text">0</span>
+                            <span class="stat-label">Achievements</span>
+                        </div>
+
+                        <div class="stat-card glass-card tilt-card">
+                            <span class="stat-number gradient-text">0</span>
+                            <span class="stat-label">Current Targets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🚀 INTERNSHIP SECTION -->
+        <section id="internship" class="internship-section section-padding">
+            <div class="container">
+                <div class="internship-banner glass-card glow-border">
+                    <div class="banner-badge">
+                        <i data-lucide="rocket"></i>
+                        <span>CAREER GOAL</span>
+                    </div>
+
+                    <h2 class="banner-title">
+                        Looking for <span class="gradient-text">Internship Opportunities</span>
+                    </h2>
+
+                    <p class="banner-description">
+                        I'm currently looking for an internship where I can apply my frontend development and programming skills, learn from experienced developers, and gain real-world industry experience.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary glass-btn btn-lg">
+                        <span>Let's Connect</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📩 CONTACT SECTION -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info Panel -->
+                    <div class="contact-info-panel glass-card tilt-card">
+                        <h3>Contact Information</h3>
+                        <p class="info-intro">Feel free to reach out via email, phone, or connect through social links.</p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-item-icon cyan">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">Email</span>
+                                    <a href="#" id="contact-email" class="item-value">duraikarthick0512@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon green">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">Phone</span>
+                                    <a href="#" id="contact-phone" class="item-value">+91 86108 69163</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon purple">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">Location</span>
+                                    <span id="contact-location" class="item-value">Thoothukudi</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon blue">
+                                    <i data-lucide="github"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">GitHub</span>
+                                    <a href="#" id="contact-github" class="item-value social-link-placeholder" target="_blank" rel="noopener noreferrer">github.com/yourusername</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon cyan">
+                                    <i data-lucide="linkedin"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">LinkedIn</span>
+                                    <a href="#" id="contact-linkedin" class="item-value social-link-placeholder" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourusername</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon yellow">
+                                    <i data-lucide="file-text"></i>
+                                </div>
+                                <div class="info-item-content">
+                                    <span class="item-label">Resume</span>
+                                    <a href="#" id="contact-resume" class="item-value" target="_blank" rel="noopener noreferrer">View Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel glass-card">
+                        <h3>Send Me a Message</h3>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="user_name">Name</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="user"></i>
+                                    <input type="text" id="user_name" name="name" placeholder="Your Full Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user_email">Email</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="mail"></i>
+                                    <input type="email" id="user_email" name="email" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user_message">Message</label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i data-lucide="message-square"></i>
+                                    <textarea id="user_message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary glass-btn btn-block">
+                                <span>Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+
+                            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year">2026</span> <strong>Durai</strong>. All rights reserved.</p>
+            <p class="footer-tagline">B.Tech IT Student &amp; Frontend Developer</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Dialog -->
+    <div id="toast-modal" class="toast-modal glass-panel" aria-hidden="true" role="dialog">
+        <div class="toast-content">
+            <i data-lucide="info" class="toast-icon"></i>
+            <span id="toast-message">Notice message</span>
+            <button id="toast-close" class="toast-close" aria-label="Close notification">&times;</button>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
